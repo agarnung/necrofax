@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NecroFax — a fax machine for the other side</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="room">
+    <header class="masthead">
+      <div>
+        <h1>NECROFAX</h1>
+        <p>A fax machine for the other side</p>
+      </div>
+      <div class="line-led" id="line-led" aria-live="polite">NO LINE</div>
+    </header>
+
+    <main class="desk">
+      <section class="machine" aria-label="NecroFax machine">
+        <div class="machine-top">
+          <span class="model">NF-13</span>
+          <span class="badge">GROUP 3</span>
+          <span class="led" id="led" aria-hidden="true"></span>
+        </div>
+
+        <div class="lcd" id="lcd">
+          <div class="lcd-line" id="lcd-line">NO LINE</div>
+          <div class="lcd-sub" id="lcd-sub">31 OCT 2026 23:59</div>
+          <div class="lcd-wave" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="keypad" id="keypad" aria-label="Dial pad">
+          <button data-key="1">1</button>
+          <button data-key="2">2</button>
+          <button data-key="3">3</button>
+          <button data-key="4">4</button>
+          <button data-key="5">5</button>
+          <button data-key="6">6</button>
+          <button data-key="7">7</button>
+          <button data-key="8">8</button>
+          <button data-key="9">9</button>
+          <button data-key="*">*</button>
+          <button data-key="0">0</button>
+          <button data-key="#">#</button>
+        </div>
+
+        <div class="actions">
+          <button id="send" class="primary">SEND</button>
+          <button id="reply">REPLY</button>
+          <button id="archive">ARCHIVE</button>
+          <button id="stop">STOP</button>
+          <button id="mute">MUTE</button>
+        </div>
+
+        <div class="speaker" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="machine-footer">
+          <span id="status">READY</span>
+          <span id="counter">001</span>
+        </div>
+      </section>
+
+      <section class="paper-stage" aria-label="Printed fax">
+        <div class="paper" id="paper">
+          <div class="paper-inner" id="paper-inner"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footnote">
+      <span>Local only · no network · original fiction</span>
+      <span>Built with Kiro · <a href="../.kiro/specs/necrofax/requirements.md">the spec</a></span>
+    </footer>
+  </div>
+
+  <aside class="archive-drawer hidden" id="archive-drawer" aria-label="Fax archive">
+    <div class="drawer-head">
+      <h2>THE ARCHIVE</h2>
+      <button id="close-archive" aria-label="Close archive">×</button>
+    </div>
+    <input id="archive-search" type="search" placeholder="Search the dead…" />
+    <div id="archive-list" class="archive-list"></div>
+  </aside>
+
+  <dialog id="reply-dialog" class="reply-dialog">
+    <form id="reply-form" method="dialog">
+      <h2>Reply to the other side</h2>
+      <p class="muted">The line is open. Do not reply after midnight.</p>
+      <textarea id="reply-text" rows="4" maxlength="180" placeholder="Write a short reply…"></textarea>
+      <div class="dialog-actions">
+        <button type="button" id="cancel-reply">CANCEL</button>
+        <button type="submit" class="primary">SEND REPLY</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

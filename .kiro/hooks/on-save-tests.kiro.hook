@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "Run NecroFax tests on save",
+  "description": "Run the Node test suite whenever app or test JavaScript changes.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["app/**/*.js", "tests/**/*.js"]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "npm test"
+  }
+}

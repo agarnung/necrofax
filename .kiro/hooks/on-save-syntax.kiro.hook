@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "name": "Check NecroFax syntax on save",
+  "description": "Run node --check on every JavaScript file after a save.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["app/**/*.js", "tests/**/*.js"]
+  },
+  "then": {
+    "type": "runCommand",
+    "command": "node --check app/app.js && node --check app/fax.js && node --check app/codec.js && node --check app/handshake.js && node --check app/archive.js && node --check app/data.js"
+  }
+}
