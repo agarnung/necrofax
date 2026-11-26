@@ -138,7 +138,7 @@ is always visible; the app works without a mouse.
 
 ## Demo
 
-- **App:** <https://agarnung.github.io/necrofax/> (GitHub Pages; pending the first deploy)
+- **App:** <https://agarnung.github.io/necrofax/>
 - **Video:** <https://youtu.be/UFInbA85Xxo> (2:01.5, public)
 - **Kiro write-up:** [`KIRO.md`](KIRO.md)
 
