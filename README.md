@@ -139,7 +139,7 @@ is always visible; the app works without a mouse.
 ## Demo
 
 - **App:** <https://agarnung.github.io/necrofax/> (GitHub Pages; pending the first deploy)
-- **Video:** <YOUTUBE_URL> (2:01.5, public; pending upload)
+- **Video:** <https://youtu.be/UFInbA85Xxo> (2:01.5, public)
 - **Kiro write-up:** [`KIRO.md`](KIRO.md)
 
 The recording script, slide content and YouTube metadata are in
