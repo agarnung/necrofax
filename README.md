@@ -142,10 +142,6 @@ is always visible; the app works without a mouse.
 - **Video:** <https://youtu.be/UFInbA85Xxo> (2:01.5, public)
 - **Kiro write-up:** [`KIRO.md`](KIRO.md)
 
-The recording script, slide content and YouTube metadata are in
-[`docs/VIDEO.md`](docs/VIDEO.md), [`docs/SLIDES.md`](docs/SLIDES.md),
-[`docs/slides.html`](docs/slides.html) and [`docs/YOUTUBE.md`](docs/YOUTUBE.md).
-
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
