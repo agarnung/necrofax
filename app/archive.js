@@ -25,7 +25,10 @@ function read(storage) {
 }
 
 function write(storage, faxes) {
-  storage.setItem(KEY, JSON.stringify(faxes));
+  try {
+    storage.setItem(KEY, JSON.stringify(faxes));
+  } catch {
+  }
 }
 
 export function createArchive(storage = null) {

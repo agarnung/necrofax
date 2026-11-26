@@ -1,7 +1,5 @@
 # NecroFax
 
-> **GitHub topics (pendientes de añadir):** `kiro`, `kiroween`, `javascript`, `canvas`, `retro`, `hackathon`, `resurrection`
-
 **A fax machine for the other side: a dead technology revived in the browser, with a real frame codec, a simplified T.30 handshake and a thermal-paper fax that prints from a queue of original ghost stories.**
 
 Built spec-first with **Kiro** for **Kiroween 2026**, in the **Resurrection** category.
@@ -39,7 +37,9 @@ A fax machine is a dead technology: a dedicated line, a handshake, a thermal
 printer and a piece of paper. NecroFax keeps the parts that made it a machine —
 the frame format, the handshake states and the paper — and removes the parts that
 killed it: the phone line, the driver and the server. The result is not a fax-themed
-dashboard; it is a fax machine you can use.
+dashboard; it is a fax machine you can use. It is built for students, educators and
+retro-computing enthusiasts who want to see how a still-used protocol actually
+works — with no setup, no account and no network.
 
 ## How it uses Kiro
 
@@ -132,10 +132,15 @@ MIT (`LICENSE`).
 
 Every control is a native button or input. The line status is
 `aria-live="polite"`. The reply dialog uses `<dialog>` and focuses the textarea.
-The paper canvas has an accessible label. `prefers-reduced-motion` stops the paper,
-LED and wave animations. The app works without a mouse.
+The paper, LCD and status are `aria-live`; the paper canvas has an accessible
+label; `prefers-reduced-motion` stops the paper, LED and wave animations; focus
+is always visible; the app works without a mouse.
 
 ## Demo
+
+- **App:** <https://agarnung.github.io/necrofax/> (GitHub Pages; pending the first deploy)
+- **Video:** <YOUTUBE_URL> (2:01.5, public; pending upload)
+- **Kiro write-up:** [`KIRO.md`](KIRO.md)
 
 The recording script, slide content and YouTube metadata are in
 [`docs/VIDEO.md`](docs/VIDEO.md), [`docs/SLIDES.md`](docs/SLIDES.md),

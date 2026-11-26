@@ -149,7 +149,7 @@ function renderPaper(fax) {
         .map((line) => `<span class="line">${escapeHtml(line)}</span>`)
         .join("")}</div>
       <div class="ghost-wrap">
-        <canvas id="ghost" aria-label="Ghost image"></canvas>
+        <canvas id="ghost" role="img" aria-label="Ghost image"></canvas>
         <span class="ghost-label">${escapeHtml(fax.ghost).toUpperCase()}</span>
       </div>
     </div>
@@ -287,7 +287,9 @@ function renderArchive() {
 }
 
 function toggleArchive() {
-  $("#archive-drawer").classList.toggle("hidden");
+  const drawer = $("#archive-drawer");
+  drawer.classList.toggle("hidden");
+  $("#archive").setAttribute("aria-expanded", String(!drawer.classList.contains("hidden")));
   renderArchive();
 }
 
@@ -301,6 +303,7 @@ function toggleMute() {
   const button = $("#mute");
   button.classList.toggle("active", !state.muted);
   button.textContent = state.muted ? "MUTE" : "SOUND";
+  button.setAttribute("aria-pressed", String(!state.muted));
   setStatus(state.muted ? "MUTED" : "SOUND ON");
   if (!state.muted) {
     playTone({ frequency: 1650, duration: 180 });

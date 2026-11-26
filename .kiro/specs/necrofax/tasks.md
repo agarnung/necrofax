@@ -54,9 +54,12 @@
 - [x] Add `README.md`, `LICENSE`, `docs/PROTOCOL.md`, `docs/VIDEO.md`,
       `docs/SLIDES.md`, `docs/slides.html`, `docs/YOUTUBE.md`,
       `docs/STORYBOARD.md`.
-- [ ] Record the demo video (<3 minutes, public on YouTube).
-- [ ] Create the public GitHub repository and add the `kiroween` topic.
+- [x] Render the demo video: `video-edit/necrofax-demo.mp4` (2:01, 1080p, voice and separate subtitles).
+- [ ] Upload the demo video to YouTube as public.
+- [x] Create the public GitHub repository: https://github.com/agarnung/necrofax.
+- [ ] Push the local repository and add the `kiroween` topic.
 - [ ] Submit on Devpost before 4-dic-2026, 14:00 PST.
+- [x] Add `SUBMISSION.md`, `KIRO.md`, `CHECKLIST-ALEJANDRO.md` and the Pages workflow.
 
 ## Verification
 

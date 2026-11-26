@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="NecroFax — a fax machine for the other side. A real frame codec, a T.30 handshake and a thermal-paper fax, built with Kiro." />
   <title>NecroFax — a fax machine for the other side</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
@@ -13,7 +14,7 @@
         <h1>NECROFAX</h1>
         <p>A fax machine for the other side</p>
       </div>
-      <div class="line-led" id="line-led" aria-live="polite">NO LINE</div>
+      <div class="line-led" id="line-led" role="status" aria-live="polite">NO LINE</div>
     </header>
 
     <main class="desk">
@@ -24,7 +25,7 @@
           <span class="led" id="led" aria-hidden="true"></span>
         </div>
 
-        <div class="lcd" id="lcd">
+        <div class="lcd" id="lcd" role="status" aria-live="polite" aria-atomic="true">
           <div class="lcd-line" id="lcd-line">NO LINE</div>
           <div class="lcd-sub" id="lcd-sub">31 OCT 2026 23:59</div>
           <div class="lcd-wave" aria-hidden="true">
@@ -49,10 +50,10 @@
 
         <div class="actions">
           <button id="send" class="primary">SEND</button>
-          <button id="reply">REPLY</button>
-          <button id="archive">ARCHIVE</button>
+          <button id="reply" aria-haspopup="dialog" aria-controls="reply-dialog">REPLY</button>
+          <button id="archive" aria-expanded="false" aria-controls="archive-drawer">ARCHIVE</button>
           <button id="stop">STOP</button>
-          <button id="mute">MUTE</button>
+          <button id="mute" aria-pressed="false">MUTE</button>
         </div>
 
         <div class="speaker" aria-hidden="true">
@@ -67,7 +68,7 @@
       </section>
 
       <section class="paper-stage" aria-label="Printed fax">
-        <div class="paper" id="paper">
+        <div class="paper" id="paper" aria-live="polite" aria-atomic="true">
           <div class="paper-inner" id="paper-inner"></div>
         </div>
       </section>
@@ -75,7 +76,7 @@
 
     <footer class="footnote">
       <span>Local only · no network · original fiction</span>
-      <span>Built with Kiro · <a href="../.kiro/specs/necrofax/requirements.md">the spec</a></span>
+      <span>Built with Kiro · <a href="https://github.com/agarnung/necrofax/blob/main/.kiro/specs/necrofax/requirements.md">the spec</a></span>
     </footer>
   </div>
 
@@ -84,15 +85,15 @@
       <h2>THE ARCHIVE</h2>
       <button id="close-archive" aria-label="Close archive">×</button>
     </div>
-    <input id="archive-search" type="search" placeholder="Search the dead…" />
-    <div id="archive-list" class="archive-list"></div>
+    <input id="archive-search" type="search" aria-label="Search the archive" placeholder="Search the dead…" />
+    <div id="archive-list" class="archive-list" aria-live="polite"></div>
   </aside>
 
-  <dialog id="reply-dialog" class="reply-dialog">
+  <dialog id="reply-dialog" class="reply-dialog" aria-labelledby="reply-title" aria-describedby="reply-hint">
     <form id="reply-form" method="dialog">
-      <h2>Reply to the other side</h2>
-      <p class="muted">The line is open. Do not reply after midnight.</p>
-      <textarea id="reply-text" rows="4" maxlength="180" placeholder="Write a short reply…"></textarea>
+      <h2 id="reply-title">Reply to the other side</h2>
+      <p class="muted" id="reply-hint">The line is open. Do not reply after midnight.</p>
+      <textarea id="reply-text" rows="4" maxlength="180" aria-label="Reply text" placeholder="Write a short reply…"></textarea>
       <div class="dialog-actions">
         <button type="button" id="cancel-reply">CANCEL</button>
         <button type="submit" class="primary">SEND REPLY</button>

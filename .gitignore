@@ -1,3 +1,10 @@
 node_modules/
 *.log
 .DS_Store
+
+video-edit/
+
+# Local working docs (not part of the submission)
+SUBMISSION.md
+CHECKLIST-ALEJANDRO.md
+docs/subtitles.srt
